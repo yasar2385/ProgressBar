@@ -17,3 +17,7 @@ function myKeyPress(e) {
 
   alert(String.fromCharCode(keynum));
 }
+
+document.getElementById('tabCols').onkeypress = function(e) {
+  e.target.setCustomValidity('This field cannot be left blank');
+};
