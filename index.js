@@ -34,3 +34,13 @@ document.getElementById('tabCols').onkeypress = function(e) {
     e.target.setCustomValidity('This field cannot be left blank');
   }
 };
+
+let input = document.querySelector('input');
+let log = document.getElementById('log');
+
+input.onchange = handleChange;
+
+function handleChange(e) {
+  log.textContent = `The field's value is
+      ${e.target.value.length} character(s) long.`;
+}
