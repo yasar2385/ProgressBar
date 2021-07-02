@@ -1,16 +1,21 @@
 <div id="app"></div>
-<label for="tabCols">Number of balloons to order (multiples of 10):</label>
-<input
-  type="number"
-  min="1"
-  step="1"
-  class="form-control form-control-sm"
-  id="tabCols"
-  value="2"
-  required
-  name="tabCols"
-/>
-<input type="text" />
+<form>
+  <label for="tabCols">Number of balloons to order (multiples of 10):</label>
+  <input
+    type="number"
+    min="1"
+    max="15"
+    step="1"
+    class="form-control form-control-sm"
+    id="tabCols"
+    value="2"
+    required
+    name="tabCols"
+    oninvalid="this.setCustomValidity('Enter User Name Here')"
+    oninput="this.setCustomValidity('')"
+  />
+  <input type="text" />
+</form>
 <div class="progress">
   <div
     class="progress-bar progress-bar-striped"

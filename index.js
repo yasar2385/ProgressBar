@@ -19,5 +19,18 @@ function myKeyPress(e) {
 }
 
 document.getElementById('tabCols').onkeypress = function(e) {
-  e.target.setCustomValidity('This field cannot be left blank');
+  var keynum;
+  if (window.event) {
+    // IE
+    keynum = e.keyCode;
+  } else if (e.which) {
+    // Netscape/Firefox/Opera
+    keynum = e.which;
+  }
+  console.log(keynum)
+  if (keynum > 48 && keynum <= 57) {
+    
+  } else {
+    e.target.setCustomValidity('This field cannot be left blank');
+  }
 };
